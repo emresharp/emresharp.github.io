@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #00A;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+h1 {
+  margin: 0px;
+  margin-bottom: 0px;
+}
+
+h1, h3, address {
+  text-align: center;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 40px auto;
+  font-family: 'Crimson Text', serif;
+  line-height: 1.2;
+  font-size: 15px;
+  text-rendering: optimizeLegibility !important;
+  max-width: 800px;
+}
+
+.border {
+  margin: 0px;
+  overflow: hidden;
+  border: 2px solid black;
+  padding: 40px;
+  padding-top: 30px;
+}
+
+.h2wrapper {
+  /* Setting this on the h2 directly triggers a safari bug that clears floats unnecessarily */
+  margin-right: -42px;
+}
+h2 {
+  overflow: hidden;
+  position: relative;
+  font-variant: small-caps;
+  font-size: 200%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+h2:after {
+  content: "";
+  border-top: 2px solid black;
+  width: 100%;
+  position: absolute;
+  margin-left: 40px;
+  top: calc(.7em - 1px);
+}
+
+.time {
+  /*color: #BBB;*/
+  margin-left: 8px;
+  font-variant: none;
+  font-size: 75%;
+  display: inline-block;
+}
+
+ul {
+  font-weight: bold;
+  list-style: none;
+  font-variant: small-caps;
+  font-size: 150%;
+  padding-left: 0px;
+  margin-top: 0px;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+ul ul {
+  font-weight: normal;
+  list-style: none;
+  padding-top: 5px;
+  font-variant: normal;
+  font-size: 66.66%;
+}
+
+.figures {
+  float: right;
+  width: 30%;
+  max-width: 200px;
+  margin-left: 30px;
+  margin-top: -20px;
+}
+
+img {
+  width: auto;
+  display: block;
+  max-width: 100%;
+  margin: 30px 0px;
+}
+
+a img {
+  border: 0px;
+}
+
+address {
+  font-style: normal;
+  font-size: 1.9vw;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+address a {
+  color: black;
+}
+
+address img {
+  width: auto;
+  display: inline-block;
+  margin: -1% 1px;
+  vertical-align: baseline;
+  max-width: 6%;
+}
+
+@media (max-width: 400px) { body { font-size: 3.75vw; } }
+@media (min-width: 800px) { address { font-size: 15px; } }
+
+@media screen and (max-width: 880px) {
+  .border {
+    border: 0px;
+    padding: 42px;
+    padding-top: 32px;
+  }
+}
+
+@media not print {
+  .print {
+    display: none;
+  }
+}
+
+@media print {
+  a {
+    color: black;
+  }
+  body {
+    margin: 0px;
+    height: 100%;
+  }
+  html {
+    height: 100%;
+  }
+  .border {
+    height: calc(100% - 2px);
+  }
+  .figures {
+    max-width: 160px;
+  }
+  iframe {
+    display: none;
+  }
+}
